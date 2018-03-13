@@ -7,10 +7,10 @@
 <script>
 import { mapState, mapActions } from "vuex";
 export default {
-  name: "HelloWorld",
+  name: "page2",
   data(){
     return {
-      name: "HelloWorld"
+      name: "page2"
     }
   },
   computed: {

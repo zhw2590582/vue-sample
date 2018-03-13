@@ -1,25 +1,31 @@
 <template>
   <div class="hello">
-    {{name}}
+    {{name | filter1}}
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
 export default {
-  name: "HelloWorld",
+  name: "page1",
   data(){
     return {
-      name: "HelloWorld"
+      name: "page1"
     }
   },
   computed: {
-    ...mapState({})
+    ...mapState({
+      count: state => state.test.count
+    })
   },
   methods: {
-    ...mapActions({})
+    ...mapActions(["increment", "request"])
   },
-  mounted() {},
+  mounted() {
+    setTimeout(() => {
+      this.request();
+    }, 3000)
+  },
   components: {}
 };
 </script>
