@@ -4,8 +4,8 @@ import store from "./store";
 import router from "./router";
 import filter from "./filter";
 import beforeEach from "./util/beforeEach";
-import 'promise-polyfill';
-import 'whatwg-fetch';
+import "promise-polyfill";
+import "whatwg-fetch";
 
 Vue.config.productionTip = false;
 
